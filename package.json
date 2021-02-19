@@ -1,0 +1,25 @@
+{
+  "name": "jest-how-to-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^26.6.3",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santosh-mnrec/jest-how-to-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santosh-mnrec/jest-how-to-example/issues"
+  },
+  "homepage": "https://github.com/santosh-mnrec/jest-how-to-example#readme"
+}
