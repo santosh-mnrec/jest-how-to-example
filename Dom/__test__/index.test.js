@@ -1,13 +1,19 @@
-'use strict';
+const m = require("../index");
+describe( 'Hide show on click of button', () => {
+	const addClass = jest.fn();
+	const removeClass = jest.fn();
+	const hasClass = jest.fn(className => {return true;});
 
-const htmlContent = fs.readFileSync('index.html', 'utf-8'); //load the HTML content
+	const jQuery = jest.fn(() => ({
+		addClass,
+		removeClass,
+		hasClass
+	}));
 
 
-
-describe('Dom Test', () => {
-    it('should click the button', () => {
-        //for example
-        let h1 = document.querySelector('h1');
-        expert(h1.textContent).toEqual('Hello world!');
-    })
-})
+	it( 'removes class when has class', () => {
+		m.save(jQuery);
+		expect(addClass.mock.calls.length).toBe(0);
+		expect(removeClass.mock.calls.length).toBe(1);
+	});
+});

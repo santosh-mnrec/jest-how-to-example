@@ -11,6 +11,10 @@
   "scripts": {
     "test": "jest"
   },
+  "wallaby": {
+    "autoDetect": true,
+    "trace": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/santosh-mnrec/jest-how-to-example.git"
