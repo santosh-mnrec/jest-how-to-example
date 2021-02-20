@@ -1,4 +1,4 @@
-const MyClass  = require("../dom");
+const MyClass = require("../dom");
 describe('testing as first', () => {
     let createElement;
     let querySelector;
@@ -15,10 +15,10 @@ describe('testing as first', () => {
         window.URL.createObjectURL = createObjectURL;
     });
     it('should call render method', () => {
-         
-          jest.spyOn(MyClass.prototype, 'render').mockReturnValueOnce();
-          const myClass = new MyClass();
-    
+
+        jest.spyOn(MyClass.prototype, 'render').mockReturnValueOnce();
+        const myClass = new MyClass();
+
         expect(myClass.render).toBeCalledTimes(1);
     });
     it('should render element and handle change event if input has files', () => {
