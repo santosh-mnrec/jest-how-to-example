@@ -4,18 +4,20 @@ var Dell = (() => {
         $.ajax({
             url: `url`,
             type: "GET",
-           success:exports.handleSuccess,
-           error:exports.handleError
+            success: exports.handleSuccess,
+            error: exports.handleError
 
         });
     }
 
     const handleError = () => {
-        console.log('ERROR');
+        console.error('ERROR');
     }
 
     const handleSuccess = (data) => {
         userData = data;
+        $("#result").addClass("done");
+        $("#result").addClass("done");
         console.log(userData);
     }
     const exports = {

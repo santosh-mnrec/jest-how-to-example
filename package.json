@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
-    "jest-jquery-matchers": "^2.1.0"
+    "jest-jquery-matchers": "^2.1.0",
+    "node-fetch": "^2.6.1"
   },
   "scripts": {
     "test": "jest"
