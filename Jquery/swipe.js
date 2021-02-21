@@ -1,22 +1,31 @@
-const $=require("jquery");
+const $ = require("jquery");
 
 
 
- class swipe {
-  constructor() {
-    this.init();
-  }
+class swipe {
+    constructor() {
+        this.init();
+    }
 
-  init() {
-    this.postRender();
-  }
+    init() {
+        this.preRender();
+        this.postRender();
 
-  postRender() {
-    $(document).ready(() => {
-      $('#buttonID').on('click', () => {
-        $('#navigation').addClass('blue');
-      });
-    });
-  }
+    }
+    maximize(){
+      //const h=document.documentElement.scrollHeight;
+    }
+    preRender() {
+        const ele = $("#result");
+        console.log("Init");
+    }
+
+    postRender() {
+        $(document).ready(() => {
+            $('#buttonID').on('click', () => {
+                $('#navigation').addClass('blue');
+            });
+        });
+    }
 }
-module.exports=swipe;
+module.exports = swipe;
