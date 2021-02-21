@@ -11,7 +11,7 @@ var Dell = (() => {
     }
 
     const handleError = () => {
-       // console.error('ERROR');
+        console.error('ERROR');
     }
 
     const handleSuccess = (data) => {
