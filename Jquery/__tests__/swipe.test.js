@@ -30,9 +30,9 @@ describe('60190274', () => {
         const scrollHeightSpy = jest.spyOn(document.documentElement, 'scrollHeight', 'get')
         .mockImplementation(() => 100);
 
-        new Swipe().maximize();
-     
-      //  expect(scrollHeightSpy).toHaveBeenCalled();
+        const swipe=new Swipe()
+        swipe.maximize();
+        expect(scrollHeightSpy).toHaveBeenCalled();
        
     });
 });

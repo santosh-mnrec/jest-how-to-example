@@ -13,7 +13,8 @@ class swipe {
 
     }
     maximize(){
-      //const h=document.documentElement.scrollHeight;
+      const h=document.documentElement.scrollHeight;
+      return h;
     }
     preRender() {
         const ele = $("#result");
