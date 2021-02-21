@@ -15,15 +15,13 @@
     if (header && dataHeader) {
         const headerPos = header.getBoundingClientRect();
         const dataHeaderPos = dataHeader.getBoundingClientRect();
-        const sticky = header.offsetTop;
+        let sticky = header.offsetTop;
         if (dataHeaderPos.top > headerPos.height) {
-            this.setState({
-                sticky: false
-            });
+            sticky=false;
+            return sticky;
         } else if (window.pageYOffset > sticky) {
-            this.setState({
-                sticky: true
-            });
+          sticky=true;
+            return sticky;
         }
     } else {
         return;
