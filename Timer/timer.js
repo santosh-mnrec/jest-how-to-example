@@ -42,7 +42,7 @@ class CountDown {
         this.update();
 
         //  setup a timer
-        const intervalId = setInterval(() = > {
+        const intervalId = setInterval(() => {
             // update the timer  
             this.timeRemaining -= 1000;
 

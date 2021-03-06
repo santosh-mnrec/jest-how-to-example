@@ -1,7 +1,23 @@
 const $ = require("jquery");
-
+jest.mock('fs')
+const fs = require('fs') // Mocked module
+//const fs = jest.requireActual('fs') // Original module
 const { showHide, showTooltip } = require("../playground");
 
+describe("FileSystem module",()=>{
+
+    it('should mock the fs',()=>{
+
+        fs.readFileSync.mockImplementation(()=>{
+            return "some data1";
+        })
+
+        const data=fs.readFileSync('a.txt');
+        expect(data).toBeDefined();
+        expect(data).toBe("some data1");
+    })
+
+})
 describe('Jquery DOM ', () => {
 
     it('should call document.getElementById', () => {
